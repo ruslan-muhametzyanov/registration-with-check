@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registration</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Форма регистрации</h1>
+<form action="/registration" th:object="${user}" method="post">
+    <p><b>Перед отправкой формы заполните следующие поля:</b></p>
+    <p>логин <input type="text" th:field="*{login}">
+    <p>пароль <input type="text" th:field="*{pass}">
+    <p>адрес электронной почты <input type="text" th:field="*{mail}">
+    <p>ФИО <input type="text" th:field="*{fio}">
+    <p><input type="submit"></p>
+</form>
+</body>
+</html>
